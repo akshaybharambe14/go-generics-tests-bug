@@ -28,24 +28,6 @@ func TestFind(t *testing.T) {
 			wantIndex: 0,
 			wantFound: true,
 		},
-		{
-			name: "element does not existsin slice",
-			args: args[int]{
-				v: 6,
-				s: []int{1, 2, 3, 4, 5},
-			},
-			wantIndex: 0,
-			wantFound: false,
-		},
-		{
-			name: "empty slice",
-			args: args[int]{
-				v: 6,
-				s: nil,
-			},
-			wantIndex: 0,
-			wantFound: false,
-		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
